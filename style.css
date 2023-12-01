@@ -90,7 +90,7 @@ button:focus {
     background-color: var(--orange) !important;
     letter-spacing: 1px;
     padding: .7rem !important;
-    margin-top: 2.2rem;
+    margin-top: 2.2rem !important;
     border: none;
     cursor: pointer;
 }
