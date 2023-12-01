@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Open+Sans:wght@300;400&family=Overpass:wght@300;400;700&family=Poppins:wght@200;300;400;600&display=swap');
+:root {
+    /* PRIMARY COLOR */
+    --orange: hsl(25, 97%, 53%);
+    /* NEUTRAL COLOR */
+    --white: hsl(0, 0%, 100%);
+    --light-Grey: hsl(217, 12%, 63%);
+    --medium-Grey: hsl(216, 12%, 54%);
+    --dark-Blue: hsl(215, 23%, 15%);
+    --very-Dark-Blue: hsl(216, 12%, 8%);
+    /* FONT FAMILY */
+    --overpass: 'Overpass';
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--very-Dark-Blue);
+    font-family: var(--overpass);
+    position: relative;
+}
+main {
+    width: 410px;
+    height: 415px;
+    background: radial-gradient(98% 98% at 50% 0%,hsl(215, 20%, 17%) 0%,hsl(216, 24%, 12%) 100%);
+    padding: 2rem;
+    position: absolute;
+    transition: .7s ease;
+    -webkit-transition: .7s ease;
+    -moz-transition: .7s ease;
+    -ms-transition: .7s ease;
+    -o-transition: .7s ease;
+    animation: rotatemain 1s;
+    -webkit-animation: rotatemain 1s;
+}
+main:hover {
+    transform: perspective(800px) rotateY(30deg) scale(.9) translateZ(-5rem);
+    -webkit-transform: perspective(800px) rotateY(30deg) scale(.9) translateZ(-5rem);
+    -moz-transform: perspective(800px) rotateY(30deg) scale(.9) translateZ(-5rem);
+    -ms-transform: perspective(800px) rotateY(30deg) scale(.9) translateZ(-5rem);
+    -o-transform: perspective(800px) rotateY(30deg) scale(.9) translateZ(-5rem);
+    border-left: 5px solid hsl(0, 0%, 34%);
+    border-top: 1px solid rgb(61, 61, 61);
+    border-bottom: 1px solid rgb(55, 55, 55);
+    border-right: 1px solid rgb(54, 54, 54);
+}
+.star {
+    background-color: hsl(217, 12%, 63%, 0.1);
+}
+h1 {
+    font-size: 29px;
+    margin-top: 2rem;
+}
+p {
+    font-size: 15px;
+    color: var(--medium-Grey);
+}
+.rate-btn {
+    list-style: none;
+    color: var(--light-Grey);
+    background-color: hsl(217, 12%, 63%, 0.1);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+}
+.rate-btn:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+button:focus {
+    background-color: var(--medium-Grey) !important;
+    color: var(--white);
+}
+.btn {
+    background-color: var(--orange) !important;
+    letter-spacing: 1px;
+    padding: .7rem !important;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--white) !important;
+    color: var(--orange) !important;
+}
+
+/* THANK YOU SECTION */
+
+.thank img {
+    width: 165px !important;
+}
+h5 {
+    background-color: hsl(217, 12%, 63%, 0.1);
+    color: var(--orange);
+    font-size: 16px;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+}
+h2 {
+    color: var(--white);
+}
+.thank p {
+    width: 99%;
+}
+.bg-orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* FOOTER */
+
+.attribution {
+    position: fixed;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    font-size: 11px;
+    color: var(--light-Grey);
+    text-align: center;
+    animation: opacity 2s step-end;
+    -webkit-animation: opacity 2s step-end;
+}
+.attribution a { 
+    color: var(--orange);
+    font-size: 1rem;
+}
+
+/* ANIMATION SECTION */
+
+@keyframes rotatemain {
+    from {
+        transform: perspective(800px) rotateY(55deg) scale(.5) translateX(25rem);
+        -webkit-transform: perspective(800px) rotateY(55deg) scale(.5) translateX(25rem);
+        -moz-transform: perspective(800px) rotateY(55deg) scale(.5) translateX(25rem);
+        -ms-transform: perspective(800px) rotateY(55deg) scale(.5) translateX(25rem);
+        -o-transform: perspective(800px) rotateY(55deg) scale(.5) translateX(25rem);
+        border-left: 5px solid hsl(0, 0%, 34%);
+        border-top: 1px solid rgb(61, 61, 61);
+        border-bottom: 1px solid rgb(55, 55, 55);
+        border-right: 1px solid rgb(54, 54, 54);
+        opacity: 0.5;
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+}
+
+/* RESPONSIVE PART */
+
+@media screen and (max-width: 480px) {
+    body {
+      width: 90% !important;
+      margin: auto !important;
+    }
+    main {
+        transform: scale(.8) !important;
+        -webkit-transform: scale(.8) !important;
+        -moz-transform: scale(.8) !important;
+        -ms-transform: scale(.8) !important;
+        -o-transform: scale(.8) !important;
+    }
+    main:hover {
+        border: none;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
